@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>My Webpage</title>
+        <script>
+            function greet()
+            {
+                let name = document.querySelector('#name').value;
+                if (name === '')
+                {
+                    name = 'world';
+                }
+                document.querySelector('#result').innerHTML = 'Hello, ' + name + '!';
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <nav class="top">
+                <ul class="top">
+                    <li class="top_li"><a href="index.html">Home</a></li>
+                    <li class="top_li"><a href="about_me.html">About Me</a></li>
+                    <li class="top_li"><a href="my_family.html">My Family</a></li>
+                    <li class="top_li"><a href="my_interests.html">My Interests</a></li>
+                </ul>
+            </nav>
+            <div class="form">
+              <form onsubmit="greet(); return false;">
+                  <input type="text" id="name" placeholder="Name">
+                  <input type="submit">
+              </form>
+            </div>
+            <div id="result">
+                Hello!
+            </div>
+        </header>
+        <article>
+            <h1>Peter McDonald</h1>
+            <p><img src="images/profile.jpg" width="260" alt="Peter McDonald"/></p>
+            <p>This is my website.</p>
+        </article>
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-center">
+            <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a></li>
+            <li class="page-item disabled"><a class="page-link" href="index.html">1</a></li>
+            <li class="page-item"><a class="page-link" href="about_me.html">2</a></li>
+            <li class="page-item"><a class="page-link" href="my_family.html">3</a></li>
+            <li class="page-item"><a class="page-link" href="my_interests.html">4</a></li>
+            <li class="page-item"><a class="page-link" href="about_me.html">Next</a></li>
+          </ul>
+        </nav>
+    </body>
+</html>
